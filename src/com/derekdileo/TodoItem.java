@@ -17,7 +17,7 @@ public class TodoItem {
 
     @Override
     public String toString() {
-        return "TodoItem: [" + description + ']';
+        return "  " + description + "\n";
     }
 
 }
