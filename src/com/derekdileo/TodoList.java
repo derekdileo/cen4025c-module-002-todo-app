@@ -3,6 +3,7 @@ package com.derekdileo;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// Most of the program logic happens here
 public class TodoList {
     // Used with lazy instantiation via getInstance()
     private static TodoList firstInstance = null;
@@ -10,11 +11,13 @@ public class TodoList {
     // List to hold todoItems
     private ArrayList<TodoItem> todoList;
 
-    // private constructor (only getInstance() can instantiate)
+    // Constructor is private because TodoList is a Singleton
+    // only getInstance() can instantiate
     private TodoList() {
         todoList = new ArrayList<>();
     }
 
+    // TodoList is a Singleton Class uses getInstance and a private constructor
     public static TodoList getInstance() {
         // Lazy instantiation - only instantiated if needed
         if (firstInstance == null) {
@@ -27,11 +30,12 @@ public class TodoList {
         return firstInstance;
     }
 
-    public ArrayList<TodoItem> getTodoList() {
+    private ArrayList<TodoItem> getTodoList() {
         return firstInstance.todoList;
     }
 
-    public boolean listEmpty() {
+    // Used in other methods as conditional
+    private boolean listEmpty() {
         if (firstInstance.todoList.isEmpty()) {
             System.out.println("Error: TDL is empty!");
             return true;
@@ -40,19 +44,17 @@ public class TodoList {
         }
     }
 
-    public boolean addTodoItem(String description) {
+    private void addTodoItem(String description) {
         // Validate user input
         if (description != null && !description.isBlank()) {
             TodoItem todoItem = new TodoItem(description);
             firstInstance.todoList.add(todoItem);
-            return true;
         } else {
             System.out.println("Invalid entry. Please try again.");
-            return false;
         }
     }
 
-    public void deleteFirstTodoItem() {
+    private void deleteFirstTodoItem() {
         if (!listEmpty()) {
             System.out.println("Deleting item: " + firstInstance.todoList.get(0).toString());
             firstInstance.todoList.remove(0);
@@ -61,7 +63,7 @@ public class TodoList {
         }
     }
 
-    public void deleteLastTodoItem() {
+    private void deleteLastTodoItem() {
         if (!listEmpty()) {
             int index = firstInstance.todoList.size() - 1;
             System.out.println("Deleting item: " + firstInstance.todoList.get(index).toString());
@@ -71,11 +73,11 @@ public class TodoList {
         }
     }
 
-    public void deleteTodoItemAtIndex(int index) {
+    private void deleteTodoItemAtIndex(int index) {
         if (!listEmpty()) {
-            if ((index - 1) <= firstInstance.todoList.size()) {
+            if ((index) <= firstInstance.todoList.size()) {
                 System.out.println("Deleting item: " + firstInstance.todoList.get(index).toString());
-                firstInstance.todoList.remove(index - 1);
+                firstInstance.todoList.remove(index);
             } else {
                 System.out.println("Error. No item at that location!");
                 return;
@@ -85,23 +87,24 @@ public class TodoList {
         }
     }
 
-    public void showTodoList() {
-        int counter = 1;
+    private void showTodoList() {
+        int counter = 0;
         if (firstInstance.todoList.isEmpty()) {
-            System.out.println("\nThe TDL is currently empty. Please add some items and get to work!\n");
+            System.out.println("\nThe TDL is currently empty. Please add some items and get to work!");
         } else {
-            System.out.println(" - - TO DO LIST - - ");
+            System.out.println("\n - - TO DO LIST - - ");
             for (TodoItem item : firstInstance.todoList) {
                 System.out.println("Item " + counter++ + "): " + item.toString());
             }
         }
     }
 
+    // Method called from Main to run TDL App
     public void toDoMenu(int choice) {
         while (choice != 6) {
             Scanner scanner = new Scanner(System.in);
 
-            System.out.println("1 - View Current Todo List");
+            System.out.println("\n1 - View Current Todo List");
             System.out.println("2 - Add Todo Item ");
             System.out.println("3 - Remove First Todo Item");
             System.out.println("4 - Remove Last Todo Item");
@@ -117,7 +120,7 @@ public class TodoList {
                     performOperationsUsingSwitch(choice, scanner);
 
                 } else {
-                    System.out.println("Exiting TDL. Goodbye");
+                    System.out.println("\nExiting TDL. Goodbye");
                     return;
                 }
 
@@ -129,7 +132,8 @@ public class TodoList {
 
     }
 
-    public static void performOperationsUsingSwitch(int choice, Scanner scanner) {
+    // Method which uses switch statement to handle user choices
+    private static void performOperationsUsingSwitch(int choice, Scanner scanner) {
         if (firstInstance.getTodoList() != null) {
             switch (choice) {
                 case 1:
@@ -148,7 +152,7 @@ public class TodoList {
                     firstInstance.deleteLastTodoItem();
                     break;
                 case 5:
-                    System.out.print("\nPlease type in the number of the Todo item to be deleted.");
+                    System.out.print("\nPlease type in the number of the Todo item to be deleted: ");
                     int toDelete = scanner.nextInt();
                     firstInstance.deleteTodoItemAtIndex(toDelete);
                     break;

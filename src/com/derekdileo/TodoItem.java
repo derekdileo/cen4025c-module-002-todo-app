@@ -1,23 +1,22 @@
 package com.derekdileo;
 
 public class TodoItem {
-
-//  Luxury fields
-//  private String briefDescription;
-//  private short priority;
+    // Instance variable(s)
     private String description;
 
-    public TodoItem(String briefDescription) {
-        this.description = briefDescription;
+    // Constructor
+    public TodoItem(String description) {
+        this.description = description;
     }
 
+    // Getter
     public String getDescription() {
         return description;
     }
 
     @Override
     public String toString() {
-        return "  " + description + "\n";
+        return "  " + description;
     }
 
 }

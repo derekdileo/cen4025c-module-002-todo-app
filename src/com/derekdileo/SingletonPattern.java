@@ -1,6 +1,6 @@
 package com.derekdileo;
 
-// Basic Singleton Pattern
+// Basic Singleton Pattern for reference (please disregard)
 public class SingletonPattern {
 
     private static SingletonPattern firstInstance = null;

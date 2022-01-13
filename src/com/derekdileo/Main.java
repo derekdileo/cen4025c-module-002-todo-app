@@ -15,9 +15,9 @@ public class Main {
         // Welcome user
         WelcomeToApp welcomeToApp = new WelcomeToApp();
 
+        // Enter looped menu program
         list.toDoMenu(0);
 
     }
-
 
 }
