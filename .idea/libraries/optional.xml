@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="optional">
+    <ANNOTATIONS>
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/optional" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/optional" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/optional" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/optional" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/optional" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/optional" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/optional" recursive="false" type="SOURCES" />
+  </library>
+</component>

@@ -7,5 +7,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="envers" level="project" />
+    <orderEntry type="library" name="jpa-metamodel-generator" level="project" />
+    <orderEntry type="library" name="optional" level="project" />
+    <orderEntry type="library" name="osgi" level="project" />
+    <orderEntry type="library" name="required" level="project" />
+    <orderEntry type="library" name="spatial" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-8.0.28" level="project" />
   </component>
 </module>

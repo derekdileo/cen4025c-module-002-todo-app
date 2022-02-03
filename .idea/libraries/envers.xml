@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="envers">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/envers" />
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/jpa-metamodel-generator" />
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/osgi" />
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/required" />
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/spatial" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/osgi" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/envers" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/jpa-metamodel-generator" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/osgi" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/required" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/spatial" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../../Developer/MacOS/hibernate-release-5.6.5.Final/lib/osgi" recursive="false" type="SOURCES" />
+  </library>
+</component>
