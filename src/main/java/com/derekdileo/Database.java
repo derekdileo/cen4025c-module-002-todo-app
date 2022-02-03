@@ -1,5 +1,6 @@
 package com.derekdileo;
 
+import org.hibernate.SessionFactory;
 import org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionCreator;
 
 import java.sql.Connection;
@@ -9,6 +10,11 @@ import java.sql.DriverManager;
  *  pertain to the local MySQL database for this project.
  *  @author derekdileo */
 public class Database {
+
+
+    protected static SessionFactory sessionFactory;
+    // Configurations : XML, Java Config
+
 
     // Declare shared Connection field
     protected static Connection conn;
